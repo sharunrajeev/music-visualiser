@@ -1,4 +1,3 @@
-import react from 'react';
 import './login.css';
 
 const Login = ()=> {
@@ -23,7 +22,7 @@ const Login = ()=> {
                 </div>
                 <input type="submit" value="Login"/>
                 <div class="signup_link">
-                    Not a member? <a href="#">Signup</a>
+                    Not a member? <a href="www.google.com">Signup</a>
                 </div>
             </form>
       </div>
