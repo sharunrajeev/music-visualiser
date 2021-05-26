@@ -4,8 +4,9 @@ This project was made for the event TinkerHub Build from Home
 ## Team ID
 BFH/recWgHmpsBQ7mYFez/2021
 ## Team Members
-[Rohith C Dineshan](https://github.com/rohithmaddz)
-[Saad Noushad](https://github.com/prince-of-prawns)
+[Rohith C Dineshan](https://github.com/rohithmaddz)<br/>
+[Saad Noushad](https://github.com/prince-of-prawns)<br/>
+[Sharun E Rajeev](https://github.com/sharunrajeev)
 ## Stack used
 In this project, we use 
 ### Flask - Python backend
