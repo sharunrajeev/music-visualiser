@@ -1,6 +1,10 @@
 import librosa
 import numpy as np
 import pygame
+import os
+from app import app
+
+app.config['UPLOAD_FOLDER'] = "./save/"
 
 def clamp(min_value, max_value, value):
     if value < min_value:
@@ -29,9 +33,8 @@ class AudioBar:
         pygame.draw.rect(screen, self.color, (self.x, self.y + self.max_height - self.height, self.width, self.height))
 
 
-def start_visuals():
-    filename = librosa.example('nutcracker')
-    time_series, sample_rate = librosa.load(filename)  # getting information from the file
+def start_visuals(filename):
+    time_series, sample_rate = librosa.load(os.path.join(app.config['UPLOAD_FOLDER'], filename))  # getting information from the file
 
     # getting a matrix which contains amplitude values according to frequency and time indexes
     stft = np.abs(librosa.stft(time_series, hop_length=512, n_fft=2048*4))
@@ -64,7 +67,7 @@ def start_visuals():
         x += width
     t = pygame.time.get_ticks()
     getTicksLastFrame = t
-    pygame.mixer.music.load(filename)
+    pygame.mixer.music.load(os.path.join(app.config['UPLOAD_FOLDER'],filename))
     pygame.mixer.music.play(0)
 
     # Run until the user asks to quit
