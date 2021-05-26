@@ -91,5 +91,6 @@ def start_visuals(filename):
         # Flip the display
         pygame.display.flip()
 
-    # Done! Time to quit.
+        pygame.image.save(screen, "./save/screenshot.jpeg")
+
     pygame.quit()

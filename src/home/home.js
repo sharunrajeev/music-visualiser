@@ -16,6 +16,7 @@ const Home = () => {
                 <div>
                     <button class="btn">Download</button>
                 </div>
+                <center><p>This feature yet to release!</p></center>
             </div>
         </section>
     )
